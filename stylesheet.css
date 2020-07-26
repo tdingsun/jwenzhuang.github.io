@@ -1,0 +1,118 @@
+
+html{
+box-sizing:border-box;
+overflow: hidden;
+background-image: white;
+font-size:17pt;
+}
+
+#name{
+  margin-bottom:20px; 
+  /*border: dotted 1pt blue;*/
+}
+
+#about{
+  margin-left: 5px; 
+  margin-bottom:20px;
+  /*border: dotted 1pt blue;*/
+}
+
+.main{
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  width:99%;
+  padding: 7px;
+  /*border: dotted 1pt blue;*/
+}
+
+.item{
+  width:90%;
+  height:auto;
+  margin-top: 5px;
+  padding-bottom: 20px; 
+}
+
+
+.item_about{
+  width:90%;
+  height:auto;
+  margin-top: 5px;
+  padding-bottom: 20px; 
+}
+
+.image{
+ width: 100%;
+ height: auto;
+ display: none;
+}
+
+.scroll{
+ overflow:scroll;
+ height: 95vh;
+ width:56%;
+ padding: 2px;
+ /*border: dotted 1pt blsue;*/
+}
+
+.wrap{
+ width:43%;
+ height: auto;
+}
+
+.subwrap{
+ height: 95vh;
+ overflow: scroll;
+}
+
+.caption{
+ color: black;
+ width:100%;
+ height: auto;
+ margin-left: 5px;
+ margin-top: 2px;
+ overflow: hidden;
+ /*border: dotted 1pt blue;*/
+ display: block;
+}
+
+.largerimage{
+ width:100%;
+ height: auto;
+ margin-left: auto;
+ padding: 5px;
+ /*border: dotted 1pt blue;*/
+}
+
+.largerimage .image{
+ width:100%;
+ height: auto;
+}
+
+.scroll a, .scroll a:active, .scroll a:visited, #about a, .item .date a:hover{
+  text-decoration: none;
+  color:black;
+}
+
+.largerimage .item .image a:link,
+.largerimage .item .image a:active, 
+.largerimage .item .image a:visited,
+.largerimage .item .image a:active, 
+.largerimage .item .image .link a,
+.scroll .item_about a:link,
+.scroll .item_about a:active,
+.scroll .item_about a:visited,
+.scroll .item_about .link a{
+  text-decoration: none;
+  color:black;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.scroll .item a:hover, .scroll .item_about a:link:hover{
+  border-bottom: 0.5px solid black;
+  cursor: pointer;
+}
+
+
+

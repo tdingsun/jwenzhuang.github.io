@@ -1,2 +1,2 @@
-# jwenzhuang.github.io
-Wen's website
+# jjwwzz.github.io
+Personal Website

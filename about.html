@@ -1,0 +1,61 @@
+<html> 
+
+<head>
+  <meta charset="utf-8">
+  <title>Wen</title>
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+</style>
+
+</head>
+
+<body>
+
+
+  <div class="main">
+
+    <div class="scroll">
+
+      <div id="name"><a>About</a></div>
+
+      <div class="item_about">
+         <a class="blurb_about"><a>I'm a freelance writer and editor. I live in New York. I recieved my MA in American Studies from Brown University and my BFA from Rhode Island School of Design. My research areas include critical pedagogy studies, critical university studies, and aesthetics, especially how labor and individual autonomy are both enacted and denied in these structures. <br><br> For fun, I collect things on my <a href="https://www.are.na/wen-z">Are.na.</a> There's also my<a href="https://twitter.com/flatwhistle"> Twitter,</a><a href="https://www.instagram.com/flatwhistle/"> Instagram,</a><a> and the newsletter I run,<a href="https://afountain.substack.com/"> a fountain.</a><a> For professional inquiries, you can view my  <a href="https://www.linkedin.com/feed/"> LinkedIn,</a> or <a href="mailto:jwenzhuang@gmail.com">email</a> for Resume and freelance work in copyediting, editing, proofreading, fact-checking, and writing.</a>
+         
+         </a>
+         <!-- <img class="image" src="assets/wen.JPG"> -->
+      </div>
+
+    </div>
+
+<div class="wrap">
+    
+    <div id="about"><a href="index.html">Index</a></div>
+
+    <div class="largerimage">
+    </div>
+    <div class="caption">
+      <p></p>
+    </div>
+
+</div>
+
+</body>
+
+  <script type="text/javascript">
+   
+    $(".item").click(function(){
+      let specific = $(this).clone();
+      $(".caption").append().html(specific.attr("content"));
+      $(".largerimage").append().html(specific.removeAttr('width'));
+      $(".largerimage").find('.image').css('display', 'block');
+      $(".largerimage").find('.date').css('display', 'none');
+      $(".largerimage").find('.blurb').css('display', 'none');
+      $(".largerimage").find('.item').css('padding', '0px');
+    });
+
+  </script>
+
+</html>
