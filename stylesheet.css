@@ -2,11 +2,15 @@
 html{
 box-sizing:border-box;
 overflow: hidden;
-background-image: white;
+background-image: beige;
 font-size:17pt;
 }
 
-#name{
+.division{
+ display: none;
+}
+
+.name{
   margin-bottom:20px; 
   /*border: dotted 1pt blue;*/
 }
@@ -33,12 +37,10 @@ font-size:17pt;
   padding-bottom: 20px; 
 }
 
-
-.item_about{
+.item-start{
   width:90%;
   height:auto;
   margin-top: 5px;
-  padding-bottom: 20px; 
 }
 
 .image{
@@ -47,8 +49,16 @@ font-size:17pt;
  display: none;
 }
 
+.article{
+ width: 100%;
+ height: auto;
+ display: none;
+}
+
+
 .scroll{
- overflow:scroll;
+ overflow-y: scroll;
+ overflow-x: hidden;
  height: 95vh;
  width:56%;
  padding: 2px;
@@ -62,7 +72,8 @@ font-size:17pt;
 
 .subwrap{
  height: 95vh;
- overflow: scroll;
+ overflow-y: scroll;
+ overflow-x: hidden;
 }
 
 .caption{
@@ -72,11 +83,10 @@ font-size:17pt;
  margin-left: 5px;
  margin-top: 2px;
  overflow: hidden;
- /*border: dotted 1pt blue;*/
  display: block;
 }
 
-.largerimage{
+.largerimage {
  width:100%;
  height: auto;
  margin-left: auto;
@@ -84,35 +94,133 @@ font-size:17pt;
  /*border: dotted 1pt blue;*/
 }
 
-.largerimage .image{
- width:100%;
- height: auto;
-}
-
 .scroll a, .scroll a:active, .scroll a:visited, #about a, .item .date a:hover{
   text-decoration: none;
   color:black;
 }
 
+.largerimage .item .article a:link,
+.largerimage .item .article a:active, 
+.largerimage .item .article a:visited,
+.largerimage .item .article a:active, 
+.largerimage .item .article .link a,
 .largerimage .item .image a:link,
 .largerimage .item .image a:active, 
 .largerimage .item .image a:visited,
 .largerimage .item .image a:active, 
-.largerimage .item .image .link a,
-.scroll .item_about a:link,
-.scroll .item_about a:active,
-.scroll .item_about a:visited,
-.scroll .item_about .link a{
+.largerimage .item .image .link a{
   text-decoration: none;
   color:black;
   font-style: italic;
   cursor: pointer;
 }
 
-.scroll .item a:hover, .scroll .item_about a:link:hover{
+.scroll .item a:hover{
   border-bottom: 0.5px solid black;
   cursor: pointer;
 }
+
+
+
+/*__________________________________________________________________________________________________________________________________*/
+
+/*Mobiles and Tablets:*/
+
+
+@media screen and (max-width: 500px){
+
+   html{
+    width:100vw;
+    overflow: none;
+   }
+
+    .main{
+    display: inline-flex;
+    flex-flow: column-reverse wrap;
+    align-items: flex-start;
+    padding:7px;
+    width:100vw;
+    height:auto;
+    /*border: dotted 1pt blue;*/
+    }
+
+    .scroll{
+     width:100%;
+     overflow-y: scroll;
+     height: 45vh;
+     width:100%;
+     padding-left: 2px;
+     padding-top: 2px;
+     padding-right: 2px;
+     padding-bottom: 20px;
+    }
+
+     .subscroll{
+     height: auto;
+     overflow:hidden;
+    }
+
+    .largerimage {
+     width:100%;
+     height: auto;
+     position: relative;
+     padding: 5px;
+     overflow: scroll;
+    }
+
+
+    .item{
+    overflow: scroll;
+    }
+
+    .article {
+     max-height: 30vh;
+    }
+
+
+    .division{
+    display: block;
+    border-top: solid 1pt black;
+    width:120%;
+    margin-left: -20px;
+    background-color: white;
+    }
+
+    .largerimage .image{
+     width:40%;
+     height: auto;
+     margin:auto;
+     padding-bottom: 0px;
+    }
+
+    .wrap{
+      margin-left: 0px;
+      width:92%;
+      padding-bottom: 20px;
+      overflow:hidden;
+    }
+
+    .subwrap{
+     height: auto;
+     overflow:hidden;
+    }
+
+    .caption{
+     color: black;
+     width:100%;
+     height: auto;
+     margin-top: 20px;
+     overflow: hidden;
+     display: block;
+     overflow:hidden;
+    }
+
+}
+
+
+
+
+
 
 
 
