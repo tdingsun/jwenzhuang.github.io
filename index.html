@@ -7,10 +7,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="icon" href="wen.ico" type="image/x-icon" />
   <link href="stylesheet.css" rel="stylesheet" type="text/css">
-
-<style type="text/css">
-</style>
-
 </head>
 
 
@@ -651,86 +647,26 @@ movement, method, approach, genre all feel lacking. For the purpose of my progra
      </div>
     </div>
 
-<div class="division"></div>
+  <div class="division"></div>
 
-
-<div class="wrap">
-  <div class="subwrap">
-    
-    <div id="about"><a href="https://jwenzhuang.github.io/about.html">About</a></div>
-
-    <div class="largerimage">  
-
-         <div class="item-start">
-          <img class="image" src="assets/mirror.jpg"><br>
-          <img class="image" src="assets/hands.jpg">
-         </div>
-
+  <div class="wrap">
+    <div class="subwrap">
+      <div id="about"><a href="https://jwenzhuang.github.io/about.html">About</a></div>
+      <div class="largerimage">  
+           <div class="item-start">
+            <img class="image" src="assets/mirror.jpg"><br>
+            <img class="image" src="assets/hands.jpg">
+           </div>
+      </div>
+      <div class="caption"><p></p></div>
     </div>
-
-    <div class="caption"><p></p></div>
-
   </div>
-</div>
 
 </div>
 
 </body>
 
-  <script type="text/javascript">
-  
-
-  $( document ).ready(function() {
-    $(".item-start").find('.image').css('display', 'block');
-  });
-
-
-    function switchMedia(width) {
-
-    if (width.matches) { 
-
-      $(".name").find('a').css({"position":"absolute","top":"6px","right":"6px","margin":"9px",});
-
-
-      $(".item").click(function(){
-        let specific = $(this).clone();
-        $(".caption").append().html(specific.attr("content"));
-        $(".largerimage").append().html(specific.removeAttr('width'));
-        $(".largerimage").find('.image').css('display', 'block');
-        $(".largerimage").find('.article').css('display', 'block');
-        $(".largerimage").find('.date').css('display', 'none');
-        $(".largerimage").find('.blurb').css('display', 'none');
-        $(".largerimage").find('.item').css('padding', '0px');
-        $(".largerimage").find('.item-start').css('display', 'none');
-      });
-
-    } 
-
-    else {
-        $(".name").find('a').css('margin-bottom','20px');
-        $(".main").find('.division').css('display','hidden');
-
-        $(".item").click(function(){
-          let specific = $(this).clone();
-          $(".caption").append().html(specific.attr("content"));
-          $(".largerimage").append().html(specific.removeAttr('width'));
-          $(".largerimage").find('.image').css('display', 'block');
-          $(".largerimage").find('.article').css('display', 'block');
-          $(".largerimage").find('.date').css('display', 'none');
-          $(".largerimage").find('.blurb').css('display', 'none');
-          $(".largerimage").find('.item').css('padding', '0px');
-        });
-       }
-
-    }
-
-
-    var width = window.matchMedia("(max-width: 700px)")
-    switchMedia(width) 
-    width.addListener(switchMedia) 
-
-
-  </script>
+  <script src="script2.js"></script>
 
 </html>
 
