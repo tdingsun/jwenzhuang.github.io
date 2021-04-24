@@ -1,6 +1,23 @@
 //markdown library
 const md = window.markdownit({html: true, typographer: true});
 
+$.ajax({
+    url: `_posts/blog/${contentID}.md`,
+    datatype: "html"
+}).done(function(markdown) {
+    let div = document.createElement("div");
+    div.setAttribute('id', `${contentID}-content`);
+    if(page == 'content'){
+        div.setAttribute('class', "content-item");
+    }
+    div.innerHTML = md.render(markdown);
+    document.getElementById(page).append(div);
+
+    if(contentID == 'default'){
+        div.style.display = 'block';
+    }
+});
+
 //click handlers
 $("#container").on('click', '.index-item', function(e){
     let id = $(this).attr('id');
