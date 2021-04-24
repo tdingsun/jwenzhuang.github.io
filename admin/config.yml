@@ -6,9 +6,9 @@ publish_mode: editorial_workflow
 media_folder: "assets"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "content/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{post_id}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: json
@@ -17,8 +17,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "post id", name: "post_id", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
@@ -34,3 +32,13 @@ collections:
               - {label: Title, name: title, widget: markdown}
               - {label: Post Id, name: post_id, widget: string}
               - {label: Summary, name: summary, widget: markdown}
+      - label: "About Page"
+        name: "index"
+        file: "content/about.md"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Default Page"
+        name: "default"
+        file: "content/default.md"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
