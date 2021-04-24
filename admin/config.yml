@@ -33,7 +33,7 @@ collections:
               - {label: Post Id, name: post_id, widget: string}
               - {label: Summary, name: summary, widget: markdown}
       - label: "About Page"
-        name: "index"
+        name: "about"
         file: "content/about.md"
         fields:
           - {label: "Body", name: "body", widget: "markdown"}
