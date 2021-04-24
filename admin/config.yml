@@ -30,7 +30,7 @@ collections:
             widget: list
             fields:
               - {label: Title, name: title, widget: markdown}
-              - {label: Post Id, name: post_id, widget: string}
+              - {label: Post Id, name: post_id, widget: relation, collection: "posts", value_field: "post_id", search_fields: ["post_id", "title"]}
               - {label: Summary, name: summary, widget: markdown}
       - label: "About Page"
         name: "about"
