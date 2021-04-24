@@ -1,3 +1,7 @@
+# 03.26.21 for *The Nation*
+### 24hours
+I wrote about the home-care attendants and organizers behind the "Ain't I a Woman?" campaign and the fight to end the 24-hour workday in New York, where there has been a long history of exploitation both of workers (in this case immigrant women care workers) wage and of their time. 
+
 # 07.09.20 for *Los Angeles Review of Books*
 ### larb
 I spoke with professor and writer Leigh Claire La Berge on her book *Wages Against Artwork: Decommodified Labor and the Claims of Socially Engaged Art,* the state of art education and art making post-COVID, and the extended dependency between art and capitalism.

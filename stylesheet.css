@@ -4,8 +4,7 @@ html, body {
   font-size: 20px;
   width: 100vw;
   height: 100vh;
-  line-height: 25px;
-  color: darkslategray;
+  line-height: 26px;
 }
 
 * {
@@ -16,7 +15,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 #header {
@@ -24,26 +23,30 @@ html, body {
   flex-shrink: 0;
   display: flex;
   justify-content: space-between;
+  border-bottom: 0.5px solid black;
 
 }
 
 #header > * {
   width: 50%;
-  padding: 20px;
-  margin: -1px;
+  padding: 25px 50px 25px 50px ;
+
 }
 
 #about-btn, #index-btn {
   cursor: pointer;
 }
 
+#index-btn {
+  border-right: 0.5px solid black;
+}
+
 #about-btn:hover, #index-btn:hover {
   text-decoration: underline;
 }
 
-#body-container {
-  width: 100vw;
-  display: flex;
+#about-content p {
+  margin-top: 0;
 }
 
 #index {
@@ -53,19 +56,17 @@ html, body {
   display: flex;
   flex-direction: column;
   max-width: 650px;
-  color: dodgerblue;
+  border-right: 0.5px solid black;
+
 }
 
 #index-body {
-  overflow-y: scroll;
-  padding-left: 20px;
-  padding-right: 20px;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+  padding: 25px 50px 50px 50px;
 
-#index-body::-webkit-scrollbar {
-  display: none;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+
+  
 }
 
 #index h3 {
@@ -75,6 +76,7 @@ html, body {
 #index h1 {
   font-weight: normal;
   font-size: 1rem;
+  margin-top: 0;
 }
 
 .index-item {
@@ -82,37 +84,53 @@ html, body {
 }
 
 .index-item:hover {
+  color: #0000EE;
   text-decoration: underline;
 }
 
-.selected-index-item {
+.selected-index-item h1 {
   cursor: default;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: #0000EE;
+  /* font-family: sans-serif; */
+
+
+}
+
+.selected-index-item p {
+  padding-left: 25px;
+  color: #0000EE;
+
+}
+
+#about-content {
+  display: none;
 }
 
 #content {
   height: 100vh;
   flex-grow: 1;
-  padding-left: 10px;
-  padding-right: 10px;
   overflow: scroll;
 }
 
 .content-item {
   display: none;
+  padding: 25px 50px 50px 50px;
   max-width: 800px;
   margin: auto;
 }
 
 #content h1 {
   font-size: 1.5rem;
+  line-height: 1.6rem;
   font-weight: normal;
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 #content h2 {
   font-size: 1rem;
   font-weight: bold;
+
 }
 
 #content h3 {
@@ -123,20 +141,50 @@ html, body {
 a {
   font-style: italic;
   text-decoration: none;
-  color: unset;
+  color: #0000EE;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-blockquote p {
-  text-indent: -0.4em;
-}
-
 img {
   max-width: 100%;
+  width: 100%;
+  border-radius: 3px;
 }
 
 
+@media only screen and (max-width: 720px) {
+  #header > * {
+    padding: 15px 20px;
+  }
+  
+  #container {
+    flex-direction: column;
+  }
 
+  #index {
+    width: 100vw;
+    max-width: none;
+    height: 50vh;
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+
+  #index-body {
+    padding: 20px;
+  }
+  #content {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .content-item {
+    padding: 20px;
+  }
+
+  #default-content p {
+    margin-top: 0;
+  }
+}
